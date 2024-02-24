@@ -238,6 +238,7 @@ if __name__ == "__main__":
                 if ".csv" in file:
                     create_playlist_and_add_song(os.path.join(argv[1], file))
 
+# Modified by @diestor on Github
 # Developped by @therealmarius on GitHub
 # Based on the work of @simonschellaert on GitHub
 # Github project page: https://github.com/therealmarius/Spotify-2-AppleMusic
