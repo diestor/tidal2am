@@ -1,0 +1,22 @@
+#Tidal to Apple Music
+Import any Tidal playlist to Apple Music for free!
+
+1. Export your Tidal playlist to a .CSV file. Download the desired playlist from Tidal using tunemymusic.com/en/transfer
+Please note that this mod only works with the format provided by this website.
+2. Get the following Apple Music data. Apple Music Authorization (Bearer Token); Cookies; and Apple Music Media-User-Token.
+2.1 You can get all the other data using your favorite browser. Fire it up and open the Apple Music web player: https://music.apple.com. 
+2.2. Open DevTools (**Ctrl + Shift + I or Cmd + Opt + I**) and go to the Network tab. 
+2.3. Then you'll need to log in to your account. If you're already logged in, please log out and log in again. 
+2.4. Go back to the DevTools and look for a GET request to *https://buy.music.apple.com/account/web/info* (It seems like there are 2 requests to this URL; it should be the second one).
+2.5. In the **Requests Headers**, copy the **Authorization**, the **Media-User-Token** and the **Cookies**
+3. Open the transfer.py in your terminal and run the following: "py transfer.py [yourplaylist].csv". Replace [yourplaylist] with the name of your playlist which should be in the same directory as the script.
+4. You will be asked to introduce your data you've acquired on 2. Just copy and paste each to it's own.
+5. You're good to go!
+
+***
+Recommendations: Keep your Apple Music session running so your cookies won't expire and the script can work flawlessly.
+
+***
+Limitations and Notes: 
+This modification has also edited the results when a song is not found. This script creates a new .csv file containing the songs it did not found so you can make a new run with the same data from the session with this new .csv so you can make sure there are no songs lost in the way.
+Please note that the current script is configured to the Malaysia Storefront, so please update it with your current region. If you're not sure which region you are, check the last bit in the Cookies, those two letters are your region code, which you should replace in line 59.
